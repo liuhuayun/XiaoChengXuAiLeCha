@@ -5,6 +5,10 @@
 -----------------------------------  
  #### 下载微信web开发者工具，clone项目到本地，用微信web开发者打开项目，模拟器上（编译或CTRL+S）查看项目
       git clone https://git.oschina.net/dave_hai/XiaoChengXuAiLeCha.git
+
+gh_f6b5fea530a2_430 (1).jpg![二维码](https://git.oschina.net/uploads/images/2017/0911/221143_006dfb71_453823.png "屏幕截图.png")
+
+
  #### 最后模拟器上效果如下：
  ![首页](https://git.oschina.net/uploads/images/2017/0911/220257_e83ec141_453823.png "IMG_0210.PNG")
 ![银行卡归属地](https://git.oschina.net/uploads/images/2017/0911/220322_fe30f78e_453823.png "IMG_0211.PNG")
