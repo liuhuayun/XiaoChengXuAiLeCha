@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 微信小程序Reader&Movie 
 ===================================  
    
@@ -80,3 +81,7 @@
  ![](https://github.com/sunshine824/WeChat_Reader-Movie/blob/master/static/IMG_0139.PNG)
  ![](https://github.com/sunshine824/WeChat_Reader-Movie/blob/master/static/IMG_0140.PNG)
  ![](https://github.com/sunshine824/WeChat_Reader-Movie/blob/master/static/IMG_0141.PNG)
+=======
+# 小程序爱乐查
+爱乐查，身份证归属地，银行卡归属地，手机号归属地，银行汇率
+>>>>>>> 29936859bda553998540f914f974df01f19324f9
