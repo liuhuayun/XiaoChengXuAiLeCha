@@ -1,87 +1,52 @@
-<<<<<<< HEAD
-微信小程序Reader&Movie 
+小程序【爱乐查】
 ===================================  
    
 运行项目
 -----------------------------------  
  #### 下载微信web开发者工具，clone项目到本地，用微信web开发者打开项目，模拟器上（编译或CTRL+S）查看项目
-      git clone https://github.com/sunshine824/WeChat_Reader-Movie.git
+      git clone https://git.oschina.net/dave_hai/XiaoChengXuAiLeCha.git
  #### 最后模拟器上效果如下：
-  ![](https://github.com/sunshine824/WeChat_Reader-Movie/blob/master/static/jdfw.gif)
+ ![首页](https://git.oschina.net/uploads/images/2017/0911/220257_e83ec141_453823.png "IMG_0210.PNG")
+![银行卡归属地](https://git.oschina.net/uploads/images/2017/0911/220322_fe30f78e_453823.png "IMG_0211.PNG")
+![银行汇率](https://git.oschina.net/uploads/images/2017/0911/220353_2eb79065_453823.png "IMG_0213.PNG")
   
- 项目结构
------------------------------------
-```javascript
-.
-├── README.md
-├── data                                    // 自定义data数据
-├── images                                  //静态图片文件夹
-├── pages
-│   ├── movies                              //电影模块
-│   │   ├── more-movie                      //更多电影页面
-│   │   │   └── more-movie.js
-│   │   │   └── more-movie.json             //more-movie配置文件
-│   │   │   └── more-movie.wxml
-│   │   │   └── more-movie.wxss
-│   │   ├── movie                           //单个电影组件
-│   │   ├── movie-grid                      //所有电影整合的组件
-│   │   ├── more-list                       //单个分类电影列表
-│   │   ├── movie-detail                    //电影详情
-│   │   ├── stars                           //评分组件
-│   │   ├── movies.js                       //电影模块脚本
-│   │   ├── movies.json
-│   │   ├── movies.wxml 
-│   │   └── movies.wxss
-│   ├── posts                              //文章模块
-│   │   ├── post-detail                    //文章详情组件
-│   │   ├── post-item                      //单个文章组件
-│   │   ├── post.js 
-│   │   ├── post.json  
-│   │   ├── post.wxml 
-│   │   └── post.wxss
-│   ├── welcome                           //欢迎入口文件
-│   │   ├── welcome.js 
-│   │   ├── welcome.json  
-│   │   ├── welcome.wxml 
-│   │   └── welcome.wxss
-├── untils                               //公共方法模块
-├── └── untils.js
-├── app.js
-├── app.json                            //公共配置文件
-├── app.wxss                            //公共样式表
-└── static
+其中一个API，代码都有：
+
+> ### 银行卡归属地（S100）
+
+1. ##### 请求方式：[POST](http://www.zhaotool.com/markdown.html#)
+2. ##### 请求地址：[http://www.zhaotool.com/v1/api/lt/{key}/{q}](http://www.zhaotool.com/v1/api/lt/{key}) 
+3. ##### 数据格式：JSON 
+4. ##### 请求参数： {\#请求参数}
+
+| 参数 | 类型 | 描述 |
+| :--- | :--- | :--- |
+| key | varchar | 你的密钥 |
+| q | varchar | 手机号码 |
+
+5. ##### 请求示例： http://www.zhaotool.com/v1/api/lt/e10adc3949ba59abbe56e057f20f883e/6210300009958544
+
+* ##### 返回Body：
+
+```
+{
+    "code": "0",
+    "data": {
+        "bankName": "北京银行",
+        "cardType": "京卡借记卡-借记卡",
+        "logo": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKC9k=........",
+        "site": "http://www.bankofbeijing.com.cn",
+        "bankMobile": "95526",
+        "logoType": "BASE64",
+        "bankCard": "621030000995XXXX"
+    },
+    "sid": "S100"
+}
 ```
 
- 注意事项
------------------------------------
-      1.如何设置纵向轮播:vertical="{{true}}"
+* ##### 返回说明：
 
-      2.如何阻止事件冒泡:catch+事件
+最后打个广告，我弄的开发和设计师的优秀导航网站：http://www.zhaotool.com
+![输入图片说明](https://git.oschina.net/uploads/images/2017/0911/220841_0264cfb9_453823.png "屏幕截图.png")
 
-      3.wx.navigateTo 是平行跳转，由主页面跳到子页面 跳转后会触发 onHide
-        wx.redirectTo 是平级跳转 跳转后会触发 onUnload 
 
-      4.如果页面使用了tabBar组件，只能使用wx.switchTab实现跳转，wx.navigateTo、wx.redirectTo则不行
-
-      5.为什么会出现“脚本错误或者未正确调用Page()”的错误提示？
-       *出现这个错误的原因通常是因为对应页面的js文件里，没有调用Page方法。即使js文件里没有任何代码，也需要在js里添加一个空的 Page({})。注意Page的P要大写。
-
-      6.为什么会出现“Expecting ‘String，‘Number，‘NULL，‘True....’”’’的错误提示？
-       *出现这个错误的原因在于对应页面的json文件没有加入{ }。即使json文件里没有任何内容，也需要加入一个{ }，作为默认代码。json文件不允许出现注释代码，如果有注释的代码，同样会报这个错误。
-
-      7.为什么 出现“ Failed to load image http://2110932784.debug.open.weixin.qq.com/pages/posts/images/post/crab.png : the server responded with a status of 404 (HTTP/1.1 404 Not Found) From server 127.0.0.1”
-       *出现类似的这种错误，通常是由于图片的路径不对而引起的。外网的图片，我们这里不再说了，因为没有相对和绝对的路径概念，如果报错了就是你外网的图片url错了。我们说说本地的图片路径问题。请注意，如果图片路径被写在一个js文件A里，而B引用了这个js文件，那么图片的路径必须是相对于B的相对路径。所以，最好在公共的js文件里使用绝对路径。
-       还有一点，提醒大家，小程序对资源文件，比如图片是有缓存的，这个大家要注意。
-
-### 更多注意事项请查看[小程序注意事项](https://zhuanlan.zhihu.com/oldtimes)
-
-### 新增功能 分享 扫二维码
- ![](https://github.com/sunshine824/WeChat_Reader-Movie/blob/master/static/IMG_0137.PNG)
- ![](https://github.com/sunshine824/WeChat_Reader-Movie/blob/master/static/IMG_0138.PNG)
- ![](https://github.com/sunshine824/WeChat_Reader-Movie/blob/master/static/IMG_0139.PNG)
- ![](https://github.com/sunshine824/WeChat_Reader-Movie/blob/master/static/IMG_0140.PNG)
- ![](https://github.com/sunshine824/WeChat_Reader-Movie/blob/master/static/IMG_0141.PNG)
-=======
-# 小程序爱乐查
-爱乐查，身份证归属地，银行卡归属地，手机号归属地，银行汇率
->>>>>>> 29936859bda553998540f914f974df01f19324f9
