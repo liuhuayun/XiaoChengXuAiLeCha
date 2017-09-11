@@ -1,33 +1,39 @@
 {
   "pages": [
-    "pages/welcome/welcome",
-    "pages/posts/post",
-    "pages/posts/post-detail/post-detail",
-    "pages/movies/movies",
-    "pages/movies/movies-detail/movies-detail",
-    "pages/movies/more-movie/more-movie"
+    "pages/nindex/index",
+    "pages/idcard/idcard",
+    "pages/index/index",
+    "pages/exchangeCal/exchangeCal",
+    "pages/exchangeList/exchangeList",        
+    "pages/currencyList/currencyList",
+    "pages/about/about"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#405f80"
+    "navigationBarTitleText": "爱乐查-归属地查询"
   },
   "tabBar": {
-    "selectedColor": "#405f80",
-    "color": "#707070",
-    "backgroundColor": "#ffffff",
-    "borderStyle": "black",
+    "color": "#a0a0a0",
+    "selectedColor": "#ec5c30",
+    "backgroundColor": "#f2f2f2",
+    "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/posts/post",
-        "text": "阅读",
-        "iconPath": "images/tab/yuedu.png",
-        "selectedIconPath": "images/tab/yuedu_hl.png"
+        "pagePath": "pages/nindex/index",
+        "text": "首页",
+        "iconPath": "images/tab/tab_home_def@2x.png",
+        "selectedIconPath": "images/tab/tab_home_sel@2x.png"
       },
       {
-        "pagePath": "pages/movies/movies",
-        "text": "电影",
-        "iconPath": "images/tab/dianying.png",
-        "selectedIconPath": "images/tab/dianying_hl.png"
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "images/tab/tab_user_def@2x.png",
+        "selectedIconPath": "images/tab/tab_user_sel@2x.png"
       }
     ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
   }
-}

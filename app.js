@@ -2,6 +2,16 @@ App({
     globalData:{
       g_isPlayingMusic:false,
       g_currentMusicPostId:null,
-      doubanBase:"https://api.douban.com"
+      gwapi:"https://www.zhaotool.com"
+    },
+     tradeCurrency: {
+      name: "美元",
+      description: "USD",
+      comments: "U.S.Dollar"
+    },
+    debitCurrency: {
+      name: "人民币",
+      description: "CNY",
+      comments: "Yuan Renminbi"
     }
 })
