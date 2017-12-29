@@ -19,23 +19,28 @@
   <view class="workbench">
     <text class="title">服务</text>
     <view class="list">
+        <view class="items" bindtap="toexp">
+          <image src="../../images/icon/kuaidi.png"></image>
+          <text>全国快递</text>
+        </view>
       <view class="items" bindtap="toidcard">
         <image src="../../images/icon/idcard.png"></image>
         <text>身份归属</text>
       </view>
       <view class="items" bindtap="toidcard">
         <image src="../../images/icon/bank.png"></image>
-        <text>银行查询</text>
+        <text>银行归属</text>
       </view>
       <view class="items" bindtap="toidcard">
         <image src="../../images/icon/phone.png"></image>
-        <text>手机号码</text>
+        <text>手机归属</text>
       </view>
       <view class="items" bindtap="tohuilv">
         <image src="../../images/icon/huilv.png"></image>
         <text>银行汇率</text>
       </view>
     </view>
+  
   </view>
   <view class="workbench">
     <text class="title">期待中</text>

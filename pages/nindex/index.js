@@ -50,6 +50,11 @@ Page({
       url: '../idcard/idcard'
     })
   },
+  toexp:function(){
+    wx.navigateTo({
+      url: '../exp/index/index'
+    })
+  },
   tohuilv:function(){
     wx.navigateTo({
       url: '../exchangeCal/exchangeCal'

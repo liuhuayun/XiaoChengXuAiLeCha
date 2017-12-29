@@ -1,4 +1,4 @@
-@import 'dist/ionic.app.wxss';
+
 
 text{
     font-family: MicroSoft Yahei;

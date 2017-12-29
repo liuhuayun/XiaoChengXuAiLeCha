@@ -1,5 +1,5 @@
-  
-  .swiper {
+@import '/dist/ionic.app.wxss';  
+.swiper {
   height: 400rpx;
   width: 100%;
 }
